@@ -1,0 +1,31 @@
+extends ../layout/base
+
+block vars
+  - var title = 'webpage pug'
+  - var description = 'Welcome to my page'
+  - var link = data.link
+
+  p typeof(link)
+
+block content
+  p Hello world!
+  p #{data.link}
+  p #{data.animal}
+  p #{data.edad}
+  p #{data.familia}
+  p ¿Es carnivoro? #{data.carnivoro}
+
+
+  ul
+    li !{data.animal}
+    li #{data.edad}
+    li #{data.familia}
+
+
+  
+  .input-group.flex-nowrap
+    span#addon-wrapping.input-group-text email
+    input.form-control(type='email' placeholder='Username' aria-label='Username' aria-describedby='addon-wrapping')
+
+  input(type="text", name="animal", required, value = data.familia, readonly)
+  
