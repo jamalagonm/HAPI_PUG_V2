@@ -41,7 +41,7 @@ const provision = async () => {
     });
 
     server.route({
-        method: 'POST',
+        method: 'GET',
         path: '/saving',
         handler: (request, h) => {
             return h.view("inicio/final");            
